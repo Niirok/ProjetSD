@@ -1,0 +1,7 @@
+Pour git :
+
+	git add .
+	git commit -m "MSG commit"
+	git push
+	
+	------------> push l'avancé sur la branche principale (à utiliser avec précaution)
