@@ -1,0 +1,16 @@
+package utilisateur;
+
+import java.util.Scanner;
+
+public class essais {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Veuillez saisir un mot:");
+		String str = sc.nextLine(); //ordi attends retour chariot(=entree) et lit la ligne dapres la ou on est donc ce quon ecrit
+		System.out.println("Vous avez saisie: " + str);
+		sc.close(); //ferme le scanner
+	}
+	
+
+}
