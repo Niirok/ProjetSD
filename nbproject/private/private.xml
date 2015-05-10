@@ -5,6 +5,8 @@
         <group>
             <file>file:/home/anthony/NetBeansProjects/git/src/System/Film.java</file>
             <file>file:/home/anthony/NetBeansProjects/git/src/System/Serie.java</file>
+            <file>file:/home/anthony/NetBeansProjects/git/src/System/DataRead.java</file>
+            <file>file:/home/anthony/NetBeansProjects/git/src/System/MediaImpl.java</file>
             <file>file:/home/anthony/NetBeansProjects/git/src/System/AbsMedia.java</file>
             <file>file:/home/anthony/NetBeansProjects/git/src/System/AbsVideo.java</file>
             <file>file:/home/anthony/NetBeansProjects/git/src/System/MediaSelection.java</file>

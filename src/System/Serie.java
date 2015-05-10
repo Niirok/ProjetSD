@@ -1,13 +1,17 @@
 package System;
 
 public class Serie extends AbsVideo {
-
-    public Serie(String name, int year, String[] genre, String[] casting, int duration) {
-	super(name, year, genre, casting, duration);
+    static String type = "Serie";
+    
+    public Serie(String name, int year, String[] genre, String[] casting, int duration,String synop) {
+	super(name, year, genre, casting, duration,synop);
     }
     
     public String toString(){
 	return super.toString();
+    }
+    public String getType(){
+	return Serie.type;
     }
     
 }

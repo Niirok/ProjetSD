@@ -1,18 +1,21 @@
 package System;
 
 public class Film extends AbsVideo {
+    static String type ="Film";
     protected String director;
-    protected String synop;
+
 
     public Film(String name, int year, String[] genre, String[] casting, int duration, String director, String synop) {
-	super(name, year, genre, casting, duration);
+	super(name, year, genre, casting, duration,synop);
 	this.director = director;
-	this.synop = synop;
     }
     
     public String toString(){
 	String toReturn = super.toString();
-	toReturn += "\nDirector : " + director+"\nSynopsis : "+ synop+".";
+	toReturn += "\nDirector : " + director;
 	return toReturn;
+    }
+   public String getType(){
+	return Film.type;
     }
 }

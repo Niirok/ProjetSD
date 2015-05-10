@@ -18,12 +18,17 @@ public abstract class AbsMedia implements MediaImpl {// tout les medias ont un n
 	    toReturn += genre[i];
 	    if (i!= genre.length-1){
 		toReturn += ", ";
-	    }else{
+	    }else{if(duration!=0){
 		toReturn += "\nDuration : "+ duration+"\n";
+		    }else{
+			toReturn += "\nDuration : unknown\n";
+		    }
 	    }
 	}
 	return toReturn;
     }
-    
-    
+    public String[] getGenre(){
+	return this.genre;
+    }
+    public abstract String getType();
 }
