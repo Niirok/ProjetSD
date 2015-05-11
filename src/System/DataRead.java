@@ -15,7 +15,7 @@ public class DataRead {
 	    int year, duration,longgenre;
 	    String[] casting = null, genre,titleandYearTab, genretemp2;
 	    ArrayList<String> genreTemp = new ArrayList();
-	    boolean isFilm=true, hasMins= false,isSyn = false,isDir, isCast, hasnotChanged;
+	    boolean isFilm=true, hasMins= false,isSyn = false,isDir=false, isCast, hasnotChanged;
 	    Scanner input2 = new Scanner(System.in);
 	    
 	    System.out.println("Please enter the name of datafile : ");	// Asking for a file path 
@@ -64,7 +64,8 @@ public class DataRead {
 			resultread= bufReader.readLine();//synopsis is on one line only so we can go further
 		    }}}
 		}while((!hasnotChanged));		   //if there is no new information, exit the loop
-		
+		if(!isDir)
+		    director="";
 		genreTemp.clear();			    //just to make sure this list is empty
 		genretemp2=resultread.split("\\W");
 	        for (String r : genretemp2) {
@@ -92,13 +93,13 @@ public class DataRead {
 		    AbsVideo testfilm = new Film(title,year, genre, casting,duration, director,synopsis);
 		    System.out.println(testfilm.toString()+"\n");
 		}else{
-		    AbsVideo testSerie = new Serie(title,year, genre, casting,duration,synopsis);
+		    AbsVideo testSerie = new Serie(title,year, genre, casting,duration,synopsis,director);
 		    System.out.println(testSerie.toString()+"\n");    
 		}
 		resultread=bufReader.readLine(); //go to the next parsable data
 		while(resultread.isEmpty())
 		    resultread=bufReader.readLine();
-		
+
 		isFilm=true;	//
 		hasMins= false;	//
 		isDir = false;	//
