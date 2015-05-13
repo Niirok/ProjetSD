@@ -1,0 +1,22 @@
+Voilà j'ai remis un peu d'ordre.
+
+Bon alors voila à dermarche à suivre de ton coté
+
+ 1 - Synchronise. Si pas mal de trucs changent, ne t'inquètes pas ton code est là avec moi et dans le dépot.
+
+ 2 - Ouvre ton IDE Eclipse, normalement tu devrais voir le code comme d'habitude.
+
+ 3 - Si c'est bon, quitte Eclipse. Ouvre le terminal PowerShell (celui sur ton bureau) et rentre la commande suivante :
+
+		git checkout master     //pour te mettre sur la bonne  branche
+
+		Là tu peux coder tranquille, une fois que tu as fini tu as le trio add/commit/push, mais je pense que tu maitrises ça désormais =).
+
+
+ 3 - Le code que tu as écrit cet aprem est dans l'archive "anciennesSources.zip", ainsi tu pourras le reprendre et faire les séparations. Je me suis permis de rajouté mon dernier bout de code de cette aprem.
+
+ 4 - Pas d'inquiètude de mon côté, j'attaque l'interface !
+
+
+Si tu as des problèmes quelconques, que ça ne marche pas ect, ect tu m'appelles/m'envoie un mail ou un sms à par coder j'ai pas grand chose à faire de ma soirée =). 
+Ni du WE d'ailleurs donc si tu restes sur Nancy, tu n'hésites pas ! 
