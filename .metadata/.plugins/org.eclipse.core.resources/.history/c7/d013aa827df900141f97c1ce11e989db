@@ -1,0 +1,6 @@
+package system;
+//A supprimer
+
+public interface MediaImpl  {
+    public String toString(); 
+}
