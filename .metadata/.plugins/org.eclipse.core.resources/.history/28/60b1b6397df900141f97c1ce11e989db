@@ -1,7 +1,0 @@
-
-package system;
-//A supprimer
-
-public class AbsMediaListImpl<T> extends AbsMediaList<T> {
-
-}

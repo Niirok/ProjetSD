@@ -1,9 +1,0 @@
-
-package system;
-
-import system.AbsMediaList;
-//A supprimer
-
-public class AbsMediaListImpl<T> extends AbsMediaList<T> {
-
-}
