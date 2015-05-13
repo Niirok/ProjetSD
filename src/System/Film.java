@@ -7,8 +7,7 @@ public class Film extends AbsVideo {
 	super(name, year, genre, casting, duration,synop, director);
 
     }
-    
-    public String toString(){
+   public String toString(){
 	return super.toString();
     }
    public String getType(){
