@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DataRead {
-    public static void ReadingFromData() throws FileNotFoundException, IOException,NullPointerException{	
+    public static void ReadingFromData(AbsVideoDatabase db) throws FileNotFoundException, IOException,NullPointerException{	
 	try{
 	    String title, director="",synopsis="",titleAndYear,resultread = "";
 	    int year, duration,longgenre;
@@ -90,11 +90,11 @@ public class DataRead {
 		    genre[n]=genreTemp.get(n);
 		
 		if(isFilm){//If this is a film make a new film, else it'a TV series
-		    AbsVideo testfilm = new Film(title,year, genre, casting,duration, director,synopsis);
-		    System.out.println(testfilm.toString()+"\n");
+		    AbsVideo filmToAdd = new Film(title,year, genre, casting,duration, director,synopsis);
+		    db.add(filmToAdd);
 		}else{
-		    AbsVideo testSerie = new Serie(title,year, genre, casting,duration,synopsis,director);
-		    System.out.println(testSerie.toString()+"\n");    
+		    AbsVideo serieToAdd = new Serie(title,year, genre, casting,duration,synopsis,director);
+		    db.VidDB.add(serieToAdd);
 		}
 		resultread=bufReader.readLine(); //go to the next parsable data
 		while(resultread.isEmpty())
@@ -108,7 +108,7 @@ public class DataRead {
 	    }
 	}catch(FileNotFoundException e){		
 	    System.out.println("Something goes wrong, please try again (invalid file Name)");
-	    ReadingFromData();
+	    ReadingFromData(db);
 	}catch(NullPointerException n){}
     }
 }
