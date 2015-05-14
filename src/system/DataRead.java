@@ -9,21 +9,32 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DataRead {
-    public static void ReadingFromData(AbsVideoDatabase db) throws FileNotFoundException, IOException,NullPointerException{	
+    public static void ReadingFromData(AbsVideoDatabase db, String path) throws FileNotFoundException, IOException,NullPointerException{	
 	try{
 	    String title, director="",synopsis="",titleAndYear,resultread = "";
 	    int year, duration,longgenre;
 	    String[] casting = null, genre,titleandYearTab, genretemp2;
 	    ArrayList<String> genreTemp = new ArrayList();
 	    boolean isFilm=true, hasMins= false,isSyn = false,isDir=false, isCast, hasnotChanged;
-	    Scanner input2 = new Scanner(System.in);
-	    
-	    System.out.println("Please enter the name of datafile : ");	// Asking for a file path 
-	    String fileName = input2.next();				//
-	    File dataFile = new File(fileName);				//
-	    FileReader inputRead = new FileReader(dataFile);		//
-	    BufferedReader bufReader = new BufferedReader(inputRead);	// This buffer will be used for parsing.
-	    
+	    BufferedReader bufReader;
+            
+            
+            if(path.isEmpty()){
+                Scanner input2 = new Scanner(System.in);
+                System.out.println("Please enter the name of datafile : ");	// Asking for a file path 
+                String fileName = input2.next();				//
+                File dataFile = new File(fileName);				//
+                FileReader inputRead = new FileReader(dataFile);		//
+                bufReader = new BufferedReader(inputRead);	// This buffer will be used for parsing.
+            }else{
+                File dataFile = new File(path);
+                FileReader inputRead = new FileReader(dataFile);		//
+                bufReader = new BufferedReader(inputRead);
+            }
+            
+            
+            
+            
 	    while(resultread.isEmpty())
 	        resultread=bufReader.readLine(); //buffer initialization
 	    
@@ -108,7 +119,7 @@ public class DataRead {
 	    }
 	}catch(FileNotFoundException e){ 		
 	    System.out.println("Something goes wrong, please try again (invalid file Name)");
-	    ReadingFromData(db);
+	    ReadingFromData(db,"");
 	}catch(NullPointerException n){}
     }
 }
